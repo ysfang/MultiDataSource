@@ -10,6 +10,10 @@ buildscript {
 	}
 }
 
+plugins {
+    id "org.flywaydb.flyway" version "5.0.7"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -30,3 +34,36 @@ dependencies {
 	runtime('org.postgresql:postgresql')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
+
+task migrate1(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
+    url = 'jdbc:postgresql://localhost:5432/postgres'
+    user = 'postgres'
+    password = 'pass'
+    locations = ['filesystem:src/main/resources/db/migration/ds1/']
+}
+
+task clean1(type: org.flywaydb.gradle.task.FlywayCleanTask) {
+    url = 'jdbc:postgresql://localhost:5432/postgres'
+    user = 'postgres'
+    password = 'pass'
+    locations = ['filesystem:src/main/resources/db/migration/ds1/']
+}
+
+task migrate2(type: org.flywaydb.gradle.task.FlywayMigrateTask) {
+    url = 'jdbc:postgresql://localhost:5433/postgres'
+    user = 'postgres'
+    password = 'pass'
+    locations = ['filesystem:src/main/resources/db/migration/ds2/']
+}
+
+task clean2(type: org.flywaydb.gradle.task.FlywayCleanTask) {
+    url = 'jdbc:postgresql://localhost:5433/postgres'
+    user = 'postgres'
+    password = 'pass'
+    locations = ['filesystem:src/main/resources/db/migration/ds2/']
+}
+
+
+task dbmigrate(dependsOn: ['dbclean', 'migrate1', 'migrate2'])
+
+task dbclean (dependsOn: ['clean1', 'clean2'])
