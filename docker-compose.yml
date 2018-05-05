@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+
+  DataSource1:
+    image: postgres
+    ports:
+      - '5432:5432'
+
+  DataSource2:
+    image: postgres
+    ports:
+      - '15432:5432'
