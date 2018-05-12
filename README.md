@@ -28,3 +28,7 @@ To tear down databases.
 ```
 $ docker-compose down
 ```
+
+## **Reference**
+
+[Multi DataSource discussion chain](https://github.com/mybatis/spring-boot-starter/issues/78)
