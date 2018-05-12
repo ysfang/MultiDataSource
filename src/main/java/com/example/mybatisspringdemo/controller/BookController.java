@@ -1,6 +1,6 @@
 package com.example.mybatisspringdemo.controller;
 
-import com.example.mybatisspringdemo.dao.BookMapper;
+import com.example.mybatisspringdemo.dao.dao2.BookMapper;
 
 
 import com.example.mybatisspringdemo.domain.Book;

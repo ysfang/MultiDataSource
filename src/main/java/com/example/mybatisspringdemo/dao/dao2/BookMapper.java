@@ -1,4 +1,4 @@
-package com.example.mybatisspringdemo.dao;
+package com.example.mybatisspringdemo.dao.dao2;
 
 import com.example.mybatisspringdemo.domain.Book;
 import org.apache.ibatis.annotations.Mapper;

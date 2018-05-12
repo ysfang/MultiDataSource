@@ -1,6 +1,6 @@
 package com.example.mybatisspringdemo.controller;
 
-import com.example.mybatisspringdemo.dao.UserMapper;
+import com.example.mybatisspringdemo.dao.dao1.UserMapper;
 import com.example.mybatisspringdemo.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
