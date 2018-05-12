@@ -1,5 +1,5 @@
-# MultiDataSource
-Demonstration for running spring boot application with multiple (two here) data sources.
+# MyBatisSpringDemo
+Demonstration of running MyBatis-Spring based application with multiple data sources (two here).
 
 ## **Prerequisites**
 
@@ -22,7 +22,7 @@ $ gradle dbmigrate
 
 ## **Running the application**
 
-Running main method of MultiDSDemoApplication.java
+Running main method of Application.java
 
 To tear down databases.
 ```
