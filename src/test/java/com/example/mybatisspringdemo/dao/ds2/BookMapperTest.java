@@ -1,7 +1,7 @@
-package com.example.mybatisspringdemo.dao.dao1;
+package com.example.mybatisspringdemo.dao.ds2;
 
 
-import com.example.mybatisspringdemo.domain.User;
+import com.example.mybatisspringdemo.domain.Book;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,17 +14,16 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UserMapperTest {
+public class BookMapperTest {
     @Autowired
-    private UserMapper mapper;
+    private BookMapper mapper;
 
     @Test
     public void testGetAll(){
-        List<User> li = mapper.getAll();
-        assertThat(li.size(), is(equalTo(3)));
+        List<Book> li = mapper.getAll();
+        assertThat(li.size(), is(equalTo(1)));
     }
 
 }
