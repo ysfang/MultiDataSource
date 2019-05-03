@@ -1,4 +1,4 @@
-# MyBatisSpringDemo
+# MyBatis Spring Demo
 Demonstration of running MyBatis-Spring based application with multiple data sources (two here).
 
 ## **Prerequisites**
